@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+}
+
+group 'api.tungrg.testing'
+version '1.0-SNAPSHOT'
+
+sourceSets {
+ main{
+    java{
+        srcDirs = ['src']
+    }
+ }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    implementation 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    implementation group: 'org.testng', name: 'testng', version: '7.4.0'
+    implementation 'io.rest-assured:rest-assured:4.4.0'
+    implementation 'com.github.javafaker:javafaker:1.0.2'
+}
+
+test {
+    useJUnitPlatform()
+}
